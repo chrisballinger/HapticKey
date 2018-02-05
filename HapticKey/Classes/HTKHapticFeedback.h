@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class HTKEventListener;
+@class HTKEventXPCListener;
 @class HTKSounds;
 
 typedef NS_ENUM(NSUInteger, HTKHapticFeedbackType) {
@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, HTKSoundFeedbackType) {
 
 @interface HTKHapticFeedback : NSObject
 
-@property (nonatomic, readonly) HTKEventListener *eventListener;
+@property (nonatomic, readonly) HTKEventXPCListener *eventListener;
 @property (nonatomic, getter=isEnabled) BOOL enabled;
 @property (nonatomic) HTKHapticFeedbackType type;
 @property (nonatomic) HTKSoundFeedbackType soundType;

@@ -1,12 +1,12 @@
 //
-//  EventTapXPCManager.m
+//  EventTapXPCListener.m
 //  EventTap
 //
 //  Created by Chris Ballinger on 2/4/18.
 //  Copyright © 2018 Yoshimasa Niwa. All rights reserved.
 //
 
-#import "EventTapXPCManager.h"
+#import "EventTapXPCListener.h"
 #import "HTKEventListener.h"
 
 @import os.log;
@@ -92,6 +92,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) stopListening {
     [self.service stopListening];
+}
+
+- (void)actuateActuationID:(SInt32)actuationID unknown1:(UInt32)unknown1 unknown2:(Float32)unknown2 unknown3:(Float32)unknown3 {
+    [self.service actuateActuationID:actuationID unknown1:unknown1 unknown2:unknown2 unknown3:unknown3];
 }
 
 @end

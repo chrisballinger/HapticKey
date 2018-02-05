@@ -19,4 +19,5 @@ FOUNDATION_EXPORT const unsigned char EventTapVersionString[];
 
 #import "HTKEvent.h"
 #import "HTKEventListener.h"
-#import "EventTapXPCManager.h"
+#import "EventTapXPCListener.h"
+

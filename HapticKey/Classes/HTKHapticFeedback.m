@@ -9,12 +9,12 @@
 #import "HTKEvent.h"
 #import "HTKEventListener.h"
 #import "HTKHapticFeedback.h"
-#import "HTKMultitouchActuator.h"
 #import "HTKSystemSound.h"
 #import "HTKTimer.h"
 #import "HTKSounds.h"
 
 @import AudioToolbox;
+@import EventTap;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -37,7 +37,7 @@ static NSString * const kDefaultSystemSoundsName = @"InkSoundBecomeMouse.aif";
     abort();
 }
 
-- (instancetype)initWithEventListener:(HTKEventListener *)eventListener
+- (instancetype)initWithEventListener:(HTKEventXPCListener *)eventListener
                                sounds:(nullable HTKSounds*)sounds
 {
     if (self = [super init]) {
@@ -73,7 +73,7 @@ static NSString * const kDefaultSystemSoundsName = @"InkSoundBecomeMouse.aif";
     switch (event.phase) {
         case HTKEventPhaseBegin:
             if (actuationID != 0) {
-                [[HTKMultitouchActuator sharedActuator] actuateActuationID:actuationID unknown1:0 unknown2:0.0 unknown3:2.0];
+                [self.eventListener actuateActuationID:actuationID unknown1:0 unknown2:0.0 unknown3:2.0];
             }
             [self.sounds playFingerDown];
             if (self.screenFlashEnabled) {
@@ -82,7 +82,7 @@ static NSString * const kDefaultSystemSoundsName = @"InkSoundBecomeMouse.aif";
             break;
         case HTKEventPhaseEnd:
             if (actuationID != 0) {
-                [[HTKMultitouchActuator sharedActuator] actuateActuationID:actuationID unknown1:0 unknown2:0.0 unknown3:0.0];
+                [self.eventListener actuateActuationID:actuationID unknown1:0 unknown2:0.0 unknown3:0.0];
             }
             [self.sounds playFingerUp];
             break;

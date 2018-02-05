@@ -11,6 +11,7 @@
 #import "HTKTapGestureEventListener.h"
 #import "HTKFunctionKeyEventListener.h"
 #import "HTKEvent.h"
+#import "HTKMultitouchActuator.h"
 
 @import os.log;
 
@@ -59,6 +60,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void) stopListening {
     _eventListener.enabled = NO;
+}
+
+- (void)actuateActuationID:(SInt32)actuationID unknown1:(UInt32)unknown1 unknown2:(Float32)unknown2 unknown3:(Float32)unknown3 {
+    [HTKMultitouchActuator.sharedActuator actuateActuationID:actuationID unknown1:unknown1 unknown2:unknown2 unknown3:unknown3];
 }
 
 - (void)eventListener:(HTKEventListener *)eventListener didListenEvent:(HTKEvent *)event {
