@@ -15,7 +15,7 @@ typedef NS_ENUM(NSUInteger, HTKEventPhase) {
     HTKEventPhaseEnd
 };
 
-@interface HTKEvent : NSObject
+@interface HTKEvent : NSObject <NSSecureCoding>
 
 @property (nonatomic, readonly) HTKEventPhase phase;
 

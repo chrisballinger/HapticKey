@@ -14,6 +14,8 @@
 #import "HTKSounds.h"
 #import "HTKSoundMenu.h"
 
+@import EventTap;
+
 NS_ASSUME_NONNULL_BEGIN
 
 static NSString * const kListeningEventTypeUserDefaultsKey = @"ListeningEventType";
@@ -193,15 +195,15 @@ static NSString * const kScreenFlashEnabledUserDefaultsKey = @"ScreenFlashEnable
         return;
     }
 
-    HTKEventListener *eventListener = nil;
+    HTKEventXPCListener *eventListener = [[HTKEventXPCListener alloc] init];
     switch (self.listeningEventType) {
         case HTKAppDelegateListeningEventTypeNone:
             break;
         case HTKAppDelegateListeningEventTypeFunctionKey:
-            eventListener = [[HTKFunctionKeyEventListener alloc] init];
+            [eventListener setupFunctionKeyListener];
             break;
         case HTKAppDelegateListeningEventTypeTapGesture:
-            eventListener = [[HTKTapGestureEventListener alloc] init];
+            [eventListener setupGestureListener];
             break;
     }
 

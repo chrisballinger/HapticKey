@@ -105,6 +105,8 @@ static CGEventRef EventTapCallback(CGEventTapProxy proxy, CGEventType type,  CGE
             CFRelease(_eventTap);
             _eventTap = NULL;
         }
+    } else {
+        os_log_error(OS_LOG_DEFAULT, "Event tap couldn't be enabled!");
     }
 }
 

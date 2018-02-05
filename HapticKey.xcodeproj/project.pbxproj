@@ -7,13 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5443CEFC1FE38EA8002D4086 /* HTKEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443CEFB1FE38EA8002D4086 /* HTKEventListener.m */; };
-		5443CEFF1FE38F6C002D4086 /* HTKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443CEFE1FE38F6C002D4086 /* HTKEvent.m */; };
-		5443CF051FE39049002D4086 /* HTKFunctionKeyEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443CF041FE39049002D4086 /* HTKFunctionKeyEventListener.m */; };
-		5443CF081FE39293002D4086 /* HTKTapGestureEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443CF071FE39293002D4086 /* HTKTapGestureEventListener.m */; };
 		5443CF0D1FE394BB002D4086 /* HTKHapticFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443CF0C1FE394BB002D4086 /* HTKHapticFeedback.m */; };
 		544C76362017311500FF155C /* HTKLoginItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 544C76352017311500FF155C /* HTKLoginItem.m */; };
-		546E62F71FE24A1D00F287C9 /* HTKEventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 546E62F61FE24A1D00F287C9 /* HTKEventTap.m */; };
 		548E153B1FD00412001C0D4C /* HTKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 548E153A1FD00412001C0D4C /* HTKAppDelegate.m */; };
 		548E15401FD00412001C0D4C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548E153E1FD00412001C0D4C /* MainMenu.xib */; };
 		548E15431FD00412001C0D4C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 548E15421FD00412001C0D4C /* main.m */; };
@@ -24,9 +19,69 @@
 		54FBCF291FD4CDE0000EB4D3 /* HTKMultitouchActuator.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FBCF281FD4CDE0000EB4D3 /* HTKMultitouchActuator.m */; };
 		54FBCF321FD52483000EB4D3 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 54FBCF301FD52483000EB4D3 /* AppIcon.icns */; };
 		54FBCF331FD52483000EB4D3 /* StatusItem.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 54FBCF311FD52483000EB4D3 /* StatusItem.pdf */; };
+		D92CAF1720279B78001A3073 /* EventTap.h in Headers */ = {isa = PBXBuildFile; fileRef = D92CAF1520279B78001A3073 /* EventTap.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D92CAF1A20279B78001A3073 /* EventTap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D92CAF1320279B78001A3073 /* EventTap.framework */; };
+		D92CAF1B20279B78001A3073 /* EventTap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D92CAF1320279B78001A3073 /* EventTap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D92CAF2920279B9F001A3073 /* EventTapXPCService.m in Sources */ = {isa = PBXBuildFile; fileRef = D92CAF2820279B9F001A3073 /* EventTapXPCService.m */; };
+		D92CAF2B20279B9F001A3073 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D92CAF2A20279B9F001A3073 /* main.m */; };
+		D92CAF2F20279B9F001A3073 /* EventTapXPCService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = D92CAF2420279B9F001A3073 /* EventTapXPCService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D92CAF3420279BAF001A3073 /* HTKEventTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 546E62F61FE24A1D00F287C9 /* HTKEventTap.m */; };
+		D92CAF3520279BBE001A3073 /* HTKEventTap.h in Headers */ = {isa = PBXBuildFile; fileRef = 546E62F51FE24A1D00F287C9 /* HTKEventTap.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D92CAF362027BDFA001A3073 /* HTKEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443CEFB1FE38EA8002D4086 /* HTKEventListener.m */; };
+		D92CAF372027BDFA001A3073 /* HTKFunctionKeyEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443CF041FE39049002D4086 /* HTKFunctionKeyEventListener.m */; };
+		D92CAF382027BDFA001A3073 /* HTKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443CEFE1FE38F6C002D4086 /* HTKEvent.m */; };
+		D92CAF392027BDFA001A3073 /* HTKTapGestureEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 5443CF071FE39293002D4086 /* HTKTapGestureEventListener.m */; };
+		D92CAF3A2027BE05001A3073 /* HTKEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = 5443CEFD1FE38F6C002D4086 /* HTKEvent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D92CAF3B2027BE05001A3073 /* HTKEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 5443CEFA1FE38EA8002D4086 /* HTKEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D92CAF3C2027BE05001A3073 /* HTKFunctionKeyEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 5443CF031FE39049002D4086 /* HTKFunctionKeyEventListener.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D92CAF3D2027BE05001A3073 /* HTKTapGestureEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 5443CF061FE39293002D4086 /* HTKTapGestureEventListener.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D92CAF432027C4A3001A3073 /* EventTapXPCManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D92CAF412027C4A3001A3073 /* EventTapXPCManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D92CAF442027C4A3001A3073 /* EventTapXPCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D92CAF422027C4A3001A3073 /* EventTapXPCManager.m */; };
 		D978A86E20218E8100F9810F /* HTKSounds.m in Sources */ = {isa = PBXBuildFile; fileRef = D978A86D20218E8100F9810F /* HTKSounds.m */; };
 		D9F9D553202538C900E70D09 /* HTKSoundMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D9F9D552202538C900E70D09 /* HTKSoundMenu.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D92CAF1820279B78001A3073 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 548E152E1FD00412001C0D4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D92CAF1220279B78001A3073;
+			remoteInfo = EventTap;
+		};
+		D92CAF2D20279B9F001A3073 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 548E152E1FD00412001C0D4C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D92CAF2320279B9F001A3073;
+			remoteInfo = EventTapXPCService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D92CAF1F20279B78001A3073 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D92CAF1B20279B78001A3073 /* EventTap.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D92CAF3320279B9F001A3073 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				D92CAF2F20279B9F001A3073 /* EventTapXPCService.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		17DB7DCD200A4F4600947159 /* zh-Hans */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -64,6 +119,16 @@
 		54FBCF281FD4CDE0000EB4D3 /* HTKMultitouchActuator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTKMultitouchActuator.m; sourceTree = "<group>"; };
 		54FBCF301FD52483000EB4D3 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
 		54FBCF311FD52483000EB4D3 /* StatusItem.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = StatusItem.pdf; sourceTree = "<group>"; };
+		D92CAF1320279B78001A3073 /* EventTap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EventTap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92CAF1520279B78001A3073 /* EventTap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventTap.h; sourceTree = "<group>"; };
+		D92CAF1620279B78001A3073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D92CAF2420279B9F001A3073 /* EventTapXPCService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = EventTapXPCService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		D92CAF2720279B9F001A3073 /* EventTapXPCService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventTapXPCService.h; sourceTree = "<group>"; };
+		D92CAF2820279B9F001A3073 /* EventTapXPCService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventTapXPCService.m; sourceTree = "<group>"; };
+		D92CAF2A20279B9F001A3073 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D92CAF2C20279B9F001A3073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D92CAF412027C4A3001A3073 /* EventTapXPCManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventTapXPCManager.h; sourceTree = "<group>"; };
+		D92CAF422027C4A3001A3073 /* EventTapXPCManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventTapXPCManager.m; sourceTree = "<group>"; };
 		D978A86C20218E8100F9810F /* HTKSounds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTKSounds.h; sourceTree = "<group>"; };
 		D978A86D20218E8100F9810F /* HTKSounds.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTKSounds.m; sourceTree = "<group>"; };
 		D9F9D551202538C900E70D09 /* HTKSoundMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTKSoundMenu.h; sourceTree = "<group>"; };
@@ -76,6 +141,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				54A310B81FD390EB002DE7BC /* MultitouchSupport.framework in Frameworks */,
+				D92CAF1A20279B78001A3073 /* EventTap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D92CAF0F20279B78001A3073 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D92CAF2120279B9F001A3073 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				548E15381FD00412001C0D4C /* HapticKey */,
+				D92CAF1420279B78001A3073 /* EventTap */,
+				D92CAF2520279B9F001A3073 /* EventTapXPCService */,
 				548E15371FD00412001C0D4C /* Products */,
 				54A310B61FD390EA002DE7BC /* Frameworks */,
 			);
@@ -95,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				548E15361FD00412001C0D4C /* HapticKey.app */,
+				D92CAF1320279B78001A3073 /* EventTap.framework */,
+				D92CAF2420279B9F001A3073 /* EventTapXPCService.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,14 +213,6 @@
 				D978A86D20218E8100F9810F /* HTKSounds.m */,
 				548E15391FD00412001C0D4C /* HTKAppDelegate.h */,
 				548E153A1FD00412001C0D4C /* HTKAppDelegate.m */,
-				5443CEFD1FE38F6C002D4086 /* HTKEvent.h */,
-				5443CEFE1FE38F6C002D4086 /* HTKEvent.m */,
-				5443CEFA1FE38EA8002D4086 /* HTKEventListener.h */,
-				5443CEFB1FE38EA8002D4086 /* HTKEventListener.m */,
-				546E62F51FE24A1D00F287C9 /* HTKEventTap.h */,
-				546E62F61FE24A1D00F287C9 /* HTKEventTap.m */,
-				5443CF031FE39049002D4086 /* HTKFunctionKeyEventListener.h */,
-				5443CF041FE39049002D4086 /* HTKFunctionKeyEventListener.m */,
 				5443CF0B1FE394BB002D4086 /* HTKHapticFeedback.h */,
 				5443CF0C1FE394BB002D4086 /* HTKHapticFeedback.m */,
 				544C76342017311500FF155C /* HTKLoginItem.h */,
@@ -145,8 +221,6 @@
 				54FBCF281FD4CDE0000EB4D3 /* HTKMultitouchActuator.m */,
 				54ACC70F201F15F70026CAFD /* HTKSystemSound.h */,
 				54ACC710201F15F70026CAFD /* HTKSystemSound.m */,
-				5443CF061FE39293002D4086 /* HTKTapGestureEventListener.h */,
-				5443CF071FE39293002D4086 /* HTKTapGestureEventListener.m */,
 				549F9234200AF543003A8D7B /* HTKTimer.h */,
 				549F9235200AF543003A8D7B /* HTKTimer.m */,
 				546E62F41FE2449600F287C9 /* NSTouchDevice.h */,
@@ -163,7 +237,56 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D92CAF1420279B78001A3073 /* EventTap */ = {
+			isa = PBXGroup;
+			children = (
+				D92CAF412027C4A3001A3073 /* EventTapXPCManager.h */,
+				D92CAF422027C4A3001A3073 /* EventTapXPCManager.m */,
+				5443CEFD1FE38F6C002D4086 /* HTKEvent.h */,
+				5443CEFE1FE38F6C002D4086 /* HTKEvent.m */,
+				5443CEFA1FE38EA8002D4086 /* HTKEventListener.h */,
+				5443CEFB1FE38EA8002D4086 /* HTKEventListener.m */,
+				5443CF031FE39049002D4086 /* HTKFunctionKeyEventListener.h */,
+				5443CF041FE39049002D4086 /* HTKFunctionKeyEventListener.m */,
+				5443CF061FE39293002D4086 /* HTKTapGestureEventListener.h */,
+				5443CF071FE39293002D4086 /* HTKTapGestureEventListener.m */,
+				546E62F51FE24A1D00F287C9 /* HTKEventTap.h */,
+				546E62F61FE24A1D00F287C9 /* HTKEventTap.m */,
+				D92CAF1520279B78001A3073 /* EventTap.h */,
+				D92CAF1620279B78001A3073 /* Info.plist */,
+			);
+			path = EventTap;
+			sourceTree = "<group>";
+		};
+		D92CAF2520279B9F001A3073 /* EventTapXPCService */ = {
+			isa = PBXGroup;
+			children = (
+				D92CAF2720279B9F001A3073 /* EventTapXPCService.h */,
+				D92CAF2820279B9F001A3073 /* EventTapXPCService.m */,
+				D92CAF2A20279B9F001A3073 /* main.m */,
+				D92CAF2C20279B9F001A3073 /* Info.plist */,
+			);
+			path = EventTapXPCService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D92CAF1020279B78001A3073 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D92CAF432027C4A3001A3073 /* EventTapXPCManager.h in Headers */,
+				D92CAF1720279B78001A3073 /* EventTap.h in Headers */,
+				D92CAF3520279BBE001A3073 /* HTKEventTap.h in Headers */,
+				D92CAF3C2027BE05001A3073 /* HTKFunctionKeyEventListener.h in Headers */,
+				D92CAF3A2027BE05001A3073 /* HTKEvent.h in Headers */,
+				D92CAF3B2027BE05001A3073 /* HTKEventListener.h in Headers */,
+				D92CAF3D2027BE05001A3073 /* HTKTapGestureEventListener.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		548E15351FD00412001C0D4C /* HapticKey */ = {
@@ -173,15 +296,54 @@
 				548E15321FD00412001C0D4C /* Sources */,
 				548E15331FD00412001C0D4C /* Frameworks */,
 				548E15341FD00412001C0D4C /* Resources */,
+				D92CAF1F20279B78001A3073 /* Embed Frameworks */,
+				D92CAF3320279B9F001A3073 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D92CAF1920279B78001A3073 /* PBXTargetDependency */,
+				D92CAF2E20279B9F001A3073 /* PBXTargetDependency */,
 			);
 			name = HapticKey;
 			productName = HapticKey;
 			productReference = 548E15361FD00412001C0D4C /* HapticKey.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D92CAF1220279B78001A3073 /* EventTap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D92CAF1E20279B78001A3073 /* Build configuration list for PBXNativeTarget "EventTap" */;
+			buildPhases = (
+				D92CAF0E20279B78001A3073 /* Sources */,
+				D92CAF0F20279B78001A3073 /* Frameworks */,
+				D92CAF1020279B78001A3073 /* Headers */,
+				D92CAF1120279B78001A3073 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EventTap;
+			productName = EventTap;
+			productReference = D92CAF1320279B78001A3073 /* EventTap.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D92CAF2320279B9F001A3073 /* EventTapXPCService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D92CAF3020279B9F001A3073 /* Build configuration list for PBXNativeTarget "EventTapXPCService" */;
+			buildPhases = (
+				D92CAF2020279B9F001A3073 /* Sources */,
+				D92CAF2120279B9F001A3073 /* Frameworks */,
+				D92CAF2220279B9F001A3073 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EventTapXPCService;
+			productName = EventTapXPCService;
+			productReference = D92CAF2420279B9F001A3073 /* EventTapXPCService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -194,6 +356,14 @@
 				TargetAttributes = {
 					548E15351FD00412001C0D4C = {
 						CreatedOnToolsVersion = 9.1;
+					};
+					D92CAF1220279B78001A3073 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D92CAF2320279B9F001A3073 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -214,6 +384,8 @@
 			projectRoot = "";
 			targets = (
 				548E15351FD00412001C0D4C /* HapticKey */,
+				D92CAF1220279B78001A3073 /* EventTap */,
+				D92CAF2320279B9F001A3073 /* EventTapXPCService */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +402,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D92CAF1120279B78001A3073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D92CAF2220279B9F001A3073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -240,21 +426,51 @@
 				D9F9D553202538C900E70D09 /* HTKSoundMenu.m in Sources */,
 				5443CF0D1FE394BB002D4086 /* HTKHapticFeedback.m in Sources */,
 				549F9236200AF543003A8D7B /* HTKTimer.m in Sources */,
-				5443CEFF1FE38F6C002D4086 /* HTKEvent.m in Sources */,
 				548E15431FD00412001C0D4C /* main.m in Sources */,
 				544C76362017311500FF155C /* HTKLoginItem.m in Sources */,
-				5443CF081FE39293002D4086 /* HTKTapGestureEventListener.m in Sources */,
 				D978A86E20218E8100F9810F /* HTKSounds.m in Sources */,
 				548E153B1FD00412001C0D4C /* HTKAppDelegate.m in Sources */,
-				5443CEFC1FE38EA8002D4086 /* HTKEventListener.m in Sources */,
 				54ACC711201F15F70026CAFD /* HTKSystemSound.m in Sources */,
-				546E62F71FE24A1D00F287C9 /* HTKEventTap.m in Sources */,
-				5443CF051FE39049002D4086 /* HTKFunctionKeyEventListener.m in Sources */,
 				54FBCF291FD4CDE0000EB4D3 /* HTKMultitouchActuator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D92CAF0E20279B78001A3073 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D92CAF372027BDFA001A3073 /* HTKFunctionKeyEventListener.m in Sources */,
+				D92CAF362027BDFA001A3073 /* HTKEventListener.m in Sources */,
+				D92CAF442027C4A3001A3073 /* EventTapXPCManager.m in Sources */,
+				D92CAF392027BDFA001A3073 /* HTKTapGestureEventListener.m in Sources */,
+				D92CAF382027BDFA001A3073 /* HTKEvent.m in Sources */,
+				D92CAF3420279BAF001A3073 /* HTKEventTap.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D92CAF2020279B9F001A3073 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D92CAF2B20279B9F001A3073 /* main.m in Sources */,
+				D92CAF2920279B9F001A3073 /* EventTapXPCService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D92CAF1920279B78001A3073 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D92CAF1220279B78001A3073 /* EventTap */;
+			targetProxy = D92CAF1820279B78001A3073 /* PBXContainerItemProxy */;
+		};
+		D92CAF2E20279B9F001A3073 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D92CAF2320279B9F001A3073 /* EventTapXPCService */;
+			targetProxy = D92CAF2D20279B9F001A3073 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		548E153E1FD00412001C0D4C /* MainMenu.xib */ = {
@@ -386,6 +602,7 @@
 		548E15481FD00412001C0D4C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,6 +618,7 @@
 		548E15491FD00412001C0D4C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -410,6 +628,82 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.niw.HapticKey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D92CAF1C20279B78001A3073 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = EventTap/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = at.niw.EventTap;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D92CAF1D20279B78001A3073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = EventTap/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = at.niw.EventTap;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D92CAF3120279B9F001A3073 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EventTapXPCService/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = at.niw.EventTapXPCService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D92CAF3220279B9F001A3073 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = EventTapXPCService/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_BUNDLE_IDENTIFIER = at.niw.EventTapXPCService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -430,6 +724,24 @@
 			buildConfigurations = (
 				548E15481FD00412001C0D4C /* Debug */,
 				548E15491FD00412001C0D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D92CAF1E20279B78001A3073 /* Build configuration list for PBXNativeTarget "EventTap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D92CAF1C20279B78001A3073 /* Debug */,
+				D92CAF1D20279B78001A3073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D92CAF3020279B9F001A3073 /* Build configuration list for PBXNativeTarget "EventTapXPCService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D92CAF3120279B9F001A3073 /* Debug */,
+				D92CAF3220279B9F001A3073 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
